@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input" type="text" placeholder="Input element">
+<button onclick="add()">Add</button>
+<button onclick="display()">Display</button><br><hr>
+<p id="display"></p>
+</body>
+<script>
+    let number =[]
+    function add(){
+        document.getElementById("display").innerHTML=""
+        let value = document.getElementById("input").value
+        number.push(value)
+    }
+    function display() {
+        for (let i = 0; i < number.length; i++) {
+            document.getElementById("display").innerHTML += "Element "+i+" = "+number[i]+"<br>";
+        }
+    }
+</script>
+</html>
